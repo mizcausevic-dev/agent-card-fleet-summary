@@ -1,0 +1,59 @@
+{
+  "name": "agent-card-fleet-summary",
+  "version": "0.1.0",
+  "description": "Fleet-analyze a directory of A2A AgentCard documents. Counts by autonomy_level / memory_persistence, surfaces autonomous-without-incident-response-uri, destructive-tool-on-non-autonomous, persistent-memory-without-refusal-taxonomy, missing-homepage, no-evaluations. Library + CLI.",
+  "type": "module",
+  "license": "AGPL-3.0-or-later",
+  "author": "mizcausevic-dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mizcausevic-dev/agent-card-fleet-summary"
+  },
+  "keywords": [
+    "a2a",
+    "agent-cards",
+    "agent-to-agent",
+    "governance",
+    "ai-governance",
+    "fleet-summary",
+    "typescript"
+  ],
+  "bin": {
+    "agent-card-fleet-summary": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "demo": "tsx src/cli.ts fixtures/cards --now 2026-05-27T08:00:00Z --format summary",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/node": "^22.10.0",
+    "@vitest/coverage-v8": "^2.1.8",
+    "eslint": "^9.17.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0",
+    "vitest": "^2.1.8"
+  }
+}

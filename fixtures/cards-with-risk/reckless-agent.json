@@ -1,0 +1,22 @@
+{
+  "agent_card_version": "0.1",
+  "agent": {
+    "id": "reckless-agent",
+    "name": "Reckless Agent",
+    "version": "0.1.0",
+    "provider": "kineticgain",
+    "description": "Demo agent intentionally missing safety controls."
+  },
+  "capabilities": {
+    "primary_purpose": "Test fixture for missing safety controls",
+    "models_used": [{ "model": "gpt-4o" }],
+    "tools": [
+      { "name": "drop-database", "side_effects": "destructive" }
+    ],
+    "max_context_tokens": 16000,
+    "memory_persistence": "persistent",
+    "autonomy_level": "autonomous"
+  },
+  "deployment": { "environment": "production", "status": "active" },
+  "safety_posture": {}
+}

@@ -1,0 +1,29 @@
+{
+  "agent_card_version": "0.1",
+  "agent": {
+    "id": "support-triage",
+    "name": "Support Triage",
+    "version": "0.9.0",
+    "provider": "kineticgain",
+    "description": "Auto-tags incoming support tickets and proposes a routing.",
+    "homepage": "https://example.com/support-triage"
+  },
+  "capabilities": {
+    "primary_purpose": "Ticket triage",
+    "models_used": [{ "model": "gpt-4o-mini", "role": "classifier" }],
+    "tools": [
+      { "name": "tag-ticket", "side_effects": "mutating" }
+    ],
+    "max_context_tokens": 32000,
+    "memory_persistence": "none",
+    "autonomy_level": "assistive"
+  },
+  "refusal_taxonomy": [
+    { "category": "personal-data-extraction", "behavior": "refuse_silently" }
+  ],
+  "evaluations": [
+    { "suite": "triage-bench", "result_uri": "https://example.com/evals/t1.json", "ran_at": "2026-05-20T00:00:00Z", "passed": true }
+  ],
+  "deployment": { "environment": "production", "status": "active" },
+  "safety_posture": { "incident_response_uri": "https://example.com/incidents" }
+}
