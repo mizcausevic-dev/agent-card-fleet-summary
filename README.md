@@ -42,7 +42,8 @@ console.log(toMarkdown(report));
 - [**`agent-cards-spec`**](https://github.com/mizcausevic-dev/agent-cards-spec) — the schema this reads.
 - [**`agent-card-diff`**](https://github.com/mizcausevic-dev/agent-card-diff) — diff two cards across versions.
 - [**`agent-card-tool-coverage`**](https://github.com/mizcausevic-dev/agent-card-tool-coverage) — verify a card's declared tools against an MCP server's `tools/list`.
-- [**`mcp-tool-card-summary`**](https://github.com/mizcausevic-dev/mcp-tool-card-summary) — sibling for the MCP Tool Card side.
+
+Historical reference: [**`mcp-tool-card-summary`**](https://github.com/mizcausevic-dev/mcp-tool-card-summary) is archived and read-only on GitHub as checked on 2026-10-30; its source remains available.
 
 ## Develop
 
